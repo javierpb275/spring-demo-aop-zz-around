@@ -36,10 +36,13 @@ public class MyDemoLoggingAspect {
 		Object result = theProceedingJoinPoint.proceed();//theProceedingJoinPonit: Handle to target method. .proceed(): execute the target method
 		
 		// get end timestamp
+		long end = System.currentTimeMillis();
 		
 		// compute duration and display it
+		long duration = end - begin;
+		System.out.println("\n=====>>>> Duration: " + duration / 1000.0 + " seconds");
 		 	
-			return null;
+			return result;
 			
 		}
 	
