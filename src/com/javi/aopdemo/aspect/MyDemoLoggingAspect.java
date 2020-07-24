@@ -19,6 +19,7 @@ import com.javi.aopdemo.Account;
 @Order(2)
 public class MyDemoLoggingAspect {
 	
+	/*
 	// After advice:
 	
 	@After("execution(*com.javi.aopdemo.dao.AccountDAO.findAccounts(..))")//@After will run for success or failure (finally)
@@ -47,6 +48,7 @@ public class MyDemoLoggingAspect {
 	}
 	
 	// AfterReturning advice:
+	
 	@AfterReturning(
 			pointcut="execution(*com.javi.aopdemo.dao.AccountDAO.findAccounts(..))", //match on AccountDAO.findAccounts(..)
 			returning="result")//parameter name for return value
@@ -68,7 +70,7 @@ public class MyDemoLoggingAspect {
 		// print out the result
 		System.out.println("\n=====>>>> result is: " + result);
 	}
-	
+	*/
 	
 	private void convertAccountNamesToUpperCase(List<Account> result) {
 		
