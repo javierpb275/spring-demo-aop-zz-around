@@ -33,6 +33,7 @@ public class MyDemoLoggingAspect {
 		long begin = System.currentTimeMillis();
 		
 		// execute method
+		Object result = theProceedingJoinPoint.proceed();//theProceedingJoinPonit: Handle to target method. .proceed(): execute the target method
 		
 		// get end timestamp
 		
