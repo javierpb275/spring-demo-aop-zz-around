@@ -30,6 +30,7 @@ public class MyDemoLoggingAspect {
 		System.out.println("\n=====>>>> Executing @Around advice on method: " + method);
 		
 		// get begin timestamp
+		long begin = System.currentTimeMillis();
 		
 		// execute method
 		
