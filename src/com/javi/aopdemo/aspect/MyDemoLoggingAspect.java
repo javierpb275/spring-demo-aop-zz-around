@@ -23,6 +23,19 @@ public class MyDemoLoggingAspect {
 	@After("execution(*com.javi.aopdemo.service.*.getFortune(..))")
 	public Object aroundGetFortune(
 			ProceedingJoinPoint theProceedingJoinPoint)  throws Throwable {
+		
+		
+		// print out method we are advising on
+		String method = theProceedingJoinPoint.getSignature().toShortString();
+		System.out.println("\n=====>>>> Executing @Around advice on method: " + method);
+		
+		// get begin timestamp
+		
+		// execute method
+		
+		// get end timestamp
+		
+		// compute duration and display it
 		 	
 			return null;
 			
