@@ -6,6 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.javi.aopdemo.dao.AccountDAO;
 import com.javi.aopdemo.dao.MembershipDAO;
+import com.javi.aopdemo.service.TrafficFortuneService;
 
 public class AroundDemoApp {
 
@@ -16,7 +17,8 @@ public class AroundDemoApp {
 		
 		
 		// get the bean from spring container
-		AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
+		TrafficFortuneService theFortuneService= 
+				context.getBean("trafficFortuneService", TrafficFortuneService.class);
 					
 					
 		// close the context
