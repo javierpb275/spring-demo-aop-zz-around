@@ -12,6 +12,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import org.aspectj.lang.annotation.Around;
 
 import com.javi.aopdemo.Account;
 
@@ -20,7 +21,7 @@ import com.javi.aopdemo.Account;
 @Order(2)
 public class MyDemoLoggingAspect {
 	
-	@After("execution(*com.javi.aopdemo.service.*.getFortune(..))")
+	@Around("execution(*com.javi.aopdemo.service.*.getFortune(..))")
 	public Object aroundGetFortune(
 			ProceedingJoinPoint theProceedingJoinPoint)  throws Throwable {
 		
